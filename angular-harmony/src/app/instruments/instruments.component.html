@@ -1,0 +1,20 @@
+<h2>My Instruments</h2>
+<div>
+  <label>Instrument name:
+    <input #instrumentName />
+  </label>
+  <!-- (click) passes input value to add() and then clears the input -->
+  <button (click)="add(instrumentName.value); instrumentName.value=''">
+    add
+  </button>
+</div>
+
+<ul class="instruments">
+  <li *ngFor="let instrument of instruments">
+    <a routerLink="/detail/{{instrument.id}}">
+      <span class="badge">{{instrument.id}}</span> {{instrument.name}}
+    </a>
+     <button class="delete" title="delete instrument"
+      (click)="delete(instrument)">x</button>
+  </li>
+</ul>
