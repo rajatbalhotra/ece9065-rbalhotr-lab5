@@ -1,40 +1,41 @@
-import { Component, OnInit } from '@angular/core';
+import { Component , Injectable} from '@angular/core';
+import {HttpClient} from '@angular/common/http';
+import {HttpHeaders} from '@angular/http';
+import { RequestOptions} from '@angular/http';
+import { FormsModule } from '@angular/forms';
 import { Instrument } from '../instrument';
 
 import { InstrumentService } from '../instrument.service';
+
+@Injectable()
 @Component({
   selector: 'app-instruments',
   templateUrl: './instruments.component.html',
-  styleUrls: ['./instruments.component.css']
+  styleUrls: ['./instruments.component.css'],
+  providers : [InstrumentService]
+
 })
-export class InstrumentsComponent implements OnInit {
+export class InstrumentsComponent {
 
-instruments: Instrument[];
 
-  constructor(private instrumentService: InstrumentService) { }
+ items: any;
+   newItem: string;
+   constructor(private http: HttpClient) { this.http.get('http://localhost:7070/instruments').subscribe(res => {this.items = res}); }
+   //onClick() {
+       //this._productService.getData()
+          //  .subscribe(res => {this.items = res});
+    //}
+  //public getRequest(){
+    
+ //ngOnInit() {
+ //}
+   AddInstrument() {
+        console.log(this.newItem)
+        this.http.post("http://localhost:7070/new", { title: this.newItem })
+            .subscribe(res => { this.http.get('http://localhost:7070/instruments').subscribe(res => {this.items = res});
+                
+            });
+
  
-
-  ngOnInit() {
-  this.getInstruments();
-  }
-
-
-   getInstruments(): void {
-  this.instrumentService.getInstruments()
-  .subscribe(instruments => this.instruments = instruments);
-}
- add(name: string): void {
-    name = name.trim();
-    if (!name) { return; }
-    this.instrumentService.addInstrument({ name } as Instrument)
-      .subscribe(instrument => {
-        this.instruments.push(instrument);
-      });
-  }
- 
-  delete(instrument: Instrument): void {
-    this.instruments = this.instruments.filter(h => h !== instrument);
-    this.instrumentService.deleteInstrument(instrument).subscribe();
-  }
-
-}
+ }
+ }

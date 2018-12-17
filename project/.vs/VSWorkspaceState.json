@@ -1,0 +1,15 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\angular5firebasecrud",
+    "\\angular5firebasecrud\\src",
+    "\\angular5firebasecrud\\src\\app",
+    "\\angular5firebasecrud\\src\\app\\instruments",
+    "\\angular5firebasecrud\\src\\app\\instruments\\instrument",
+    "\\angular5firebasecrud\\src\\app\\instruments\\instrument-list",
+    "\\angular5firebasecrud\\src\\app\\instruments\\shared",
+    "\\angular5firebasecrud\\src\\environments"
+  ],
+  "SelectedNode": "\\angular5firebasecrud\\src\\app\\instruments\\instruments.component.html",
+  "PreviewInSolutionExplorer": false
+}

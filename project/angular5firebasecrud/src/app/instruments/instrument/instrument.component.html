@@ -1,0 +1,30 @@
+<form #instrumentForm="ngForm">
+<div class="form-group">
+<label>Name</label>
+<input class="form-control" name="name" #name="ngModel"[(ngModel)]="instrumentService.name"placeholder="Name">
+</div>
+<div class="form-group">
+<label>Availability</label>
+<input class="form-control" name="availability" #availability="ngModel"[(ngModel)]="instrumentService.availability"placeholder="Availability">
+</div>
+<div class="form-group">
+<label>Description</label>
+<input class="form-control" name="description" #description="ngModel"[(ngModel)]="instrumentService.description"placeholder="Description">
+</div>
+<div class="form-group">
+<label>Image</label>
+<input class="form-control" name="image" #image="ngModel"[(ngModel)]="instrumentService.image"placeholder="Image">
+</div>
+<div class="form-group">
+<label>Price</label>
+<input class="form-control" name="price" #price="ngModel"[(ngModel)]="instrumentService.price"placeholder="Price">
+</div>
+<div class="form-group">
+<label>Quantity</label>
+<input class="form-control" name="quantity" #quantity="ngModel"[(ngModel)]="instrumentService.quantity"placeholder="Quantity">
+</div>
+<div class="form-group">
+<label>Rating</label>
+<input class="form-control" name="rating" #rating="ngModel"[(ngModel)]="instrumentService.rating"placeholder="Rating">
+</div>
+</form>

@@ -4,32 +4,32 @@ import { FormsModule } from '@angular/forms'; // <-- NgModel lives here
 import { HttpClientModule }    from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { InstrumentsComponent } from './instruments/instruments.component';
-import { InstrumentDetailComponent } from './instrument-detail/instrument-detail.component';
-import { MessagesComponent } from './messages/messages.component';
+//import { InstrumentDetailComponent } from './instrument-detail/instrument-detail.component';
+//import { MessagesComponent } from './messages/messages.component';
 import { AppRoutingModule } from './app-routing.module';
-import { DashboardComponent } from './dashboard/dashboard.component';
+//import { DashboardComponent } from './dashboard/dashboard.component';
 
-import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
-import { InMemoryDataService }  from './in-memory-data.service';
-import { InstrumentSearchComponent } from './instrument-search/instrument-search.component';
+//import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+//import { InMemoryDataService }  from './in-memory-data.service';
+//import { InstrumentSearchComponent } from './instrument-search/instrument-search.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     InstrumentsComponent,
-    InstrumentDetailComponent,
-    MessagesComponent,
-    DashboardComponent,
-    InstrumentSearchComponent
+    //InstrumentDetailComponent,
+    //MessagesComponent,
+    //DashboardComponent,
+    //InstrumentSearchComponent
   ],
   imports: [
-    BrowserModule,
+    //BrowserModule,
     FormsModule,
     HttpClientModule,
     AppRoutingModule,
-   HttpClientInMemoryWebApiModule.forRoot(
-      InMemoryDataService, { dataEncapsulation: false }
-    )
+   //HttpClientInMemoryWebApiModule.forRoot(
+     // InMemoryDataService, { dataEncapsulation: false }
+    //)
   ],
 
   bootstrap: [AppComponent]

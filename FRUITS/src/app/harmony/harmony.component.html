@@ -1,0 +1,32 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div>
+<button routerLink="/manager">Manager</button>
+</div>
+
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+</div>
+<h2>List Of Instruments: </h2>
+<table style="border: 1px solid black">
+  <tr *ngFor="let col of items">
+    <td>
+      {{col.title}}
+      
+    </td>
+    <td>
+      {{col.price}}
+       
+    </td>
+    <td>
+      {{col.quantity}}
+       
+    </td>
+    <td>
+    <button >Add to cart</button>
+    </td>
+  </tr>
+</table>
+
+
