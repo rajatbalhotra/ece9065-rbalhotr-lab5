@@ -5,6 +5,7 @@ import { InstrumentsComponent } from './instruments/instruments.component';
 import { ManagerComponent } from './manager/manager.component';
 import { HarmonyComponent } from './harmony/harmony.component';
 import {CommonModule} from '@angular/common';
+
 const routes: Routes = [
 {path: 'signIn', component: SigninComponent},
 {path: 'instruments', component: InstrumentsComponent},

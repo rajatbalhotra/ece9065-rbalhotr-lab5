@@ -4,6 +4,14 @@
 
 export const environment = {
   production: false
+  firebaseConfig : {
+    apiKey: "AIzaSyDsbFFSLWKGphN1zlN1PE1l1a3TWNoKP2E",
+    authDomain: "harmony-1ad95.firebaseapp.com",
+    databaseURL: "https://harmony-1ad95.firebaseio.com",
+    projectId: "harmony-1ad95",
+    storageBucket: "harmony-1ad95.appspot.com",
+    messagingSenderId: "1019739743892"
+  }
 };
 
 /*
