@@ -37,6 +37,22 @@ items: any;
                 
             });
 
-  }
+
+            updateInstrument(col: Instrument){
+
+            this.http.put("http://localhost:7070/updateins",{ title: Instrumentdetails.title,price: Instrumentdetails.price,quantity: Instrumentdetails.quantity })
+            .subscribe(res=>{console.log(res)});
+             
+                
+            });
+            deleteInstrument(col: Instrument){
+
+            this.http.post("http://localhost:7070/removeins",{ title: Instrumentdetails.title,price: Instrumentdetails.price,quantity: Instrumentdetails.quantity })
+            .subscribe(res=>{console.log(res)});
+             
+                
+            });
+
+            }
 
 }

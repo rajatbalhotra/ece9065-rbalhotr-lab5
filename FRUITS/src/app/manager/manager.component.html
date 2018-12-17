@@ -16,7 +16,7 @@
       
     </td>
     <td>
-      {{col.price}}
+      <input type="text" [(ngModel)]="col.price" />
        
     </td>
     <td>
@@ -24,8 +24,8 @@
        
     </td>
     <td>
-    <button (click)="Update()">Update</button>
-      <button (click)="Delete()">Delete</button>
+    <button (click)="updateInstrument(col)">Update</button></td>
+    <td><button (click)="deleteInstrument(col)">Delete</button>
     </td>
   </tr>
 </table>
