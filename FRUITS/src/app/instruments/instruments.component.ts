@@ -18,7 +18,8 @@ export class InstrumentsComponent implements OnInit {
 title = 'HARMONY';
   items: any;
    newItem: string;
-   Instrumentdetails: Instrument[]; 
+   Instrumentdetails: Instrument[];
+   instrumentselected: Instrument=new Instrument();
    constructor( private appservice : AppService,private http: HttpClient ) {
 
   } 
@@ -39,4 +40,12 @@ this.http.get('http://localhost:7070/instruments').
 
  
  }
+
+ clickDetails(comp){
+ console.log(comp);
+ this.instrumentselected=comp;
+
+ 
+ }
+
 }

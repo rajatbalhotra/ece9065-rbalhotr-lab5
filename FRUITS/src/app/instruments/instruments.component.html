@@ -5,6 +5,7 @@
 <div>
 <button routerLink="/signIn">Login</button>
 </div>
+
 <div style="text-align:center">
   <h1>
     Welcome to {{ title }}!
@@ -12,13 +13,21 @@
 </div>
 <h2>List Of Instruments: </h2>
 <ul>
-<li *ngFor="let item of items">
+<li *ngFor="let item of items" (click)="clickDetails(item)">
         {{item.title}}
     </li>
 </ul>
- <h4>Add Instrument</h4>
-                Name: <input type="text" [(ngModel)]="newItem" />
-                <button (click)="AddInstrument()">Add</button>
+
+<div>
+Product:{{instrumentselected.title}}
+
+Quantity:{{instrumentselected.quantity}}
+
+Price: {{instrumentselected.price}}
+
+
+</div>
+
 
 
 <!--<ul>
