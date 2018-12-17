@@ -19,11 +19,12 @@ import { NgModule, Injectable } from '@angular/core';
 export class HarmonyComponent implements OnInit {
 items: any;
    newItem: string;
+   addinstrument: Array<{title: string, price: number, quantity: number, total: number}>= []; 
    title: string;
-   price: string;
-   quatity: string;
+   price: number;
+   quantity: number;
    Instrumentdetails: Instrument[];
-
+   shop: any;
   constructor( private appservice : AppService,private http: HttpClient ) { }
 
 
@@ -32,6 +33,31 @@ items: any;
    subscribe(res => {this.items = res
    console.log(this.items)});
   }
- 
+ showshoppingcart(comp:Instrument){
+ console.log(comp)
+   this.shop=true;
+   this.addinstrument.push({
+   title: comp.title, price: comp.price, quantity: 1, total: comp.price*1
+   })
+   console.log(this.addinstrument)
+ }
+
+ removerow(comp)
+ {this.addinstrument.splice(comp,1)}
+
+ increment(comp){
+ comp.quantity=comp.quantity+1;
+ comp.total=comp.quantity*comp.price;
+
+ }
+  decrement(comp){
+ comp.quantity=comp.quantity-1;
+ comp.total=comp.quantity*comp.price;
+ }
+
+ cancel(){
+this.addinstrument=[];
+ }
+
 
 }

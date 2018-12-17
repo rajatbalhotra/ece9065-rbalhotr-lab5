@@ -24,9 +24,36 @@
        
     </td>
     <td>
-    <button (click)= >Add to cart</button>
+    <button (click)="showshoppingcart(col)" >Add to cart</button>
     </td>
   </tr>
 </table>
+<div *ngIf="shop">Shopping Cart
+<table style="border: 1px solid black">
+  <tr *ngFor="let col of addinstrument">
+  <td>
+  {{col.title}}
+  </td>
+   <td>
+  {{col.price}}
+  </td>
+   <td>
+  <!--{{col.quantity}}-->
+  <input type="text" [(ngModel)]="col.quantity" />
+  <button (click)="increment(col)" >+</button>
+  <button (click)="decrement(col)" >-</button>
+  </td>
+   <td>
+  {{col.total}}
+  </td>
+  <td>
+  <button (click)="removerow(col)" >Remove</button>
+  </td>
+  </tr>
+</table>
+<button (click)="cancel()" >Cancel</button>
+<button (click)="buy()" >Buy</button>
+</div>
+
 
 
