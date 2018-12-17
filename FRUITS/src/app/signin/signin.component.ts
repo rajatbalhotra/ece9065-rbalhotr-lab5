@@ -44,6 +44,7 @@ state: any=null;
             .then((resp) => {
                 this.state = resp
 
+
                 const emailaddress = firebase.auth().currentUser;
                 if (emailaddress.emailVerified) {
 

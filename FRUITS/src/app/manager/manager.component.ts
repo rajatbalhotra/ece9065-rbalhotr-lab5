@@ -48,7 +48,9 @@ items: any;
             deleteInstrument(col: Instrument){
 
             this.http.post("http://localhost:7070/removeins",{ title: col.title,price: col.price,quantity: col.quantity })
-            .subscribe(res=>{console.log(res)});
+            .subscribe(res=>{console.log(res)
+            }
+            );
              
 
             }
