@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\harmony",
+    "\\instruments",
+    "\\signin"
   ],
-  "SelectedNode": "\\app-routing.module.ts",
+  "SelectedNode": "\\instruments\\instruments.component.ts",
   "PreviewInSolutionExplorer": false
 }
